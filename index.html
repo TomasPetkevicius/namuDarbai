@@ -1,51 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device width, initial-scale=1.0">
-    <title>calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apklausos forma</title>
     <style>
 .flex-container {
   display: flex;
   flex-wrap: wrap}
-.flex-container > div {
-  width: 180px;
-  margin: 12px;
+.flex-container{
+  width: 260px;
+    height: 250px;
+  margin: 2px;
     padding-right: 142;
-  max-width: 290px;
+  max-width: 260px;
   text-align: center;
   line-height: 15px;
   font-size: 20px}
-.button {
-  background-color: blue;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px; 
-</style>
-</head>
+.input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;}
+        .container {color: brown}
+    </style>
 </head>
 <body>
-    <textarea></textarea>
-        <div class="flex-container">
-        <div><button class="button" type="button">7</button></div>
-        <div><button class="button" type="button">8</button></div>
-        <div><button class="button" type="button">9</button></div>
-        <div><button class="button" type="button">/</button></div>
-        <div><button class="button" type="button">4</button></div>
-        <div><button class="button" type="button">5</button></div>
-        <div><button class="button" type="button">6</button></div>
-        <div><button class="button" type="button">+</button></div>
-        <div><button class="button" type="button">1</button></div>
-        <div><button class="button" type="button">2</button></div>
-        <div><button class="button" type="button">3</button></div>
-        <div><button class="button" type="button">-</button></div>
-        <div><button class="button" type="button">0</button></div>
-        <div><button class="button" type="button">.</button></div>
-        <div><button class="button" type="button">=</button></div>  
+    <form action="action-page">
+    <div>
+        <fieldset>
+        <legend>Jūsų informacija</legend>
+    Vardas:
+    <input class="input" type="text"name="vardas">
+    Pavardė:
+    <input class="input" type="text"name="Pavardė">
+       </fieldset>
+    </div>
+    
+    <div>
+    <fieldset>
+    <legend>Klausimai:</legend>
+            <br>
+    Kaip sužinojote apie mus:
+        <div>
+                    <span class="inputValue">
+            <select>
+                <option value="Google">Google</option>
+                <option value="Media reklama">Media reklama</option>
+                <option value="iš draugų">iš draugų</option>
+                <option value="Kita">Kita</option>
+                                </select>
+          
+                        </span>
+              </div>
+        <br>
+        Ar apsilankysite dar kartą?:
+        <br>
+                   
+    <span class="inputValue">
+        <input type="radio" name="gender" value="Taip">Taip
+        <input type="radio" name="gender" value="Ne">Ne
+        <input type="radio" name="gender" value="Galbūt">Galbūt
+    </span>
+<br>
+ Ką manote apie kursą?
+<br>
+    <textarea class="input" rows="2" cols="25" placeholder="Rašykite viską, ką galvojate"></textarea>   
+<br>
+<br>
+Pažymėkite programavimo/žymėjimo kalbas, su kuriomis esate susipažinę:
+<br>
+       <div class="flexContainer">
+        <div class="container"><input type="checkbox" name="C#" value="C#"> C#</div>
+        <div class="container"><input type="checkbox" name="JAVA" value="Java"> JAVA</div>
+        <div class="container"><input type="checkbox" name="PHP" value="PHP"> PHP</div>
+        <div class="container"><input type="checkbox" name="CSS" value="CSS"> CSS</div>
+            <div class="container"><input type="checkbox" name="HTML" value="HTML"> HTML</div>
+        <div class="container"><input type="checkbox" name="Javascript" value="Javascript"> Javascript</div>
+        <div  class="container"><input type="checkbox" name="Python" value="Python"> Python</div>
+        <div  class="container"><input type="checkbox" name="Ruby" value="Ruby"> Ruby</div>
+        <div>
+        <input type="submit" value="Siųsti">
         </div>
-    </body>
+        </div>
+     </fieldset>
+        </div>
+    </form>          
+</body>
 </html>
