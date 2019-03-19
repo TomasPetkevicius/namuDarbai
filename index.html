@@ -3,90 +3,119 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apklausos forma</title>
+    <title>CssCalendar</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
-.flex-container {
-  display: flex;
-  flex-wrap: wrap}
-.flex-container{
-  width: 260px;
-    height: 250px;
-  margin: 2px;
-    padding-right: 142;
-  max-width: 260px;
-  text-align: center;
-  line-height: 15px;
-  font-size: 20px}
-.input[type=text] {
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+.month {
+  padding: 70px 25px;
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid red;
-  border-radius: 4px;}
-        .container {color: brown}
-    </style>
+  background: #1abc9c;
+  text-align: center;}
+.month ul {
+  margin: 0;
+  padding: 0;}
+.month ul li {color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;}
+.month .prev {float: left;
+  padding-top: 10px;}
+.month .next{float: right;
+  padding-top: 10px;}
+.weekdays {margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;}
+
+.weekdays li{display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;}
+
+.days {padding: 10px 0;
+  background: #eee;
+  margin: 0;}
+
+.days li {list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;}
+.days li .active {
+  padding: 5px;
+  background: #FF0000;
+  color: white !important}
+a:hover {background-color: yellow;}
+</style>
 </head>
+
 <body>
-    <form action="action-page">
-    <div>
-        <fieldset>
-        <legend>Jūsų informacija</legend>
-    Vardas:
-    <input class="input" type="text"name="vardas">
-    Pavardė:
-    <input class="input" type="text"name="Pavardė">
-       </fieldset>
-    </div>
-    
-    <div>
-    <fieldset>
-    <legend>Klausimai:</legend>
-            <br>
-    Kaip sužinojote apie mus:
-        <div>
-                    <span class="inputValue">
-            <select>
-                <option value="Google">Google</option>
-                <option value="Media reklama">Media reklama</option>
-                <option value="iš draugų">iš draugų</option>
-                <option value="Kita">Kita</option>
-                                </select>
-          
-                        </span>
-              </div>
-        <br>
-        Ar apsilankysite dar kartą?:
-        <br>
-                   
-    <span class="inputValue">
-        <input type="radio" name="gender" value="Taip">Taip
-        <input type="radio" name="gender" value="Ne">Ne
-        <input type="radio" name="gender" value="Galbūt">Galbūt
-    </span>
-<br>
- Ką manote apie kursą?
-<br>
-    <textarea class="input" rows="2" cols="25" placeholder="Rašykite viską, ką galvojate"></textarea>   
-<br>
-<br>
-Pažymėkite programavimo/žymėjimo kalbas, su kuriomis esate susipažinę:
-<br>
-       <div class="flexContainer">
-        <div class="container"><input type="checkbox" name="C#" value="C#"> C#</div>
-        <div class="container"><input type="checkbox" name="JAVA" value="Java"> JAVA</div>
-        <div class="container"><input type="checkbox" name="PHP" value="PHP"> PHP</div>
-        <div class="container"><input type="checkbox" name="CSS" value="CSS"> CSS</div>
-            <div class="container"><input type="checkbox" name="HTML" value="HTML"> HTML</div>
-        <div class="container"><input type="checkbox" name="Javascript" value="Javascript"> Javascript</div>
-        <div  class="container"><input type="checkbox" name="Python" value="Python"> Python</div>
-        <div  class="container"><input type="checkbox" name="Ruby" value="Ruby"> Ruby</div>
-        <div>
-        <input type="submit" value="Siųsti">
-        </div>
-        </div>
-     </fieldset>
-        </div>
-    </form>          
+    <h1>CSS Kalendorius</h1>
+
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      Kovas<br>
+      <span style="font-size:18px">2019</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Pr</li>
+  <li>An</li>
+  <li>Tr</li>
+  <li>Kt</li>
+  <li>Pn</li>
+  <li>Št</li>
+  <li>Sk</li>
+</ul>
+
+<ul class="days">  
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li>1</li>
+  <li>2</li>
+  <li>7</li>
+  <li>3</li>
+  <li>4</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+<li><span class="active"><a href="https://lt.wikipedia.org/wiki/Kovo_11">11</a></span></li>
+  <li>5</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li><span class="active"><a href="https://renginiai.kasvyksta.lt/vilnius/siandien">20</a></span></li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
 </body>
 </html>
