@@ -1,0 +1,17 @@
+h{color: cornflowerblue; font-size: 10}
+h1{font: 18}
+h2{font-size: 12;text-decoration: line-through}
+figcaption{font-size: 5;color: gainsboro}
+button {
+  background-color: lightgreen;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;}
+.figure{width: 50;display: block}
+body{display: flex;flex-wrap: wrap}
