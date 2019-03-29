@@ -8,28 +8,23 @@
 
 <body>
 <?php
-$cities=['cities'=>['Tokijas',
-                    'Vasingtonas',
-                    'Maskva'],
-        'cities'[]=['Londonas'];               
-        'cities2'=>['13.6','0.6','11.5'],
-'cities2'[]=['8.6'];
-        'cities3'=>['1668','1790','1147'],
-'cities3'[]=['43'];        
-        'cities4'=>['Japonija','JAV','Rusija']];
-'cities4'[]=['Anglija'];
-echo"<ul>";
-echo "<li>";
-echo "-Gyventojų skaičius:".$cities('cities2'[3]);
-echo "</li>";
-echo "<li>";
-echo "-Įkurtas:".$cities('cities3'[3]);
-echo "</li>";
-echo "<li>";
-echo "-Šalis:".cities('cities4'[3]);
-echo "</li>";
-echo"</ul>"; 
+$cities=['Tokijas'=>['13.6','1868','Japonija'],
+         'Vasingtonas'=>['0.6','1790','JAV'],
+         'Maskva'=>['11.5','1147','Rusija']
+         ];
+  $cities['Londonas']=['8.6','43','Anglija'];
  ?>
+    <ul>
+            <li>
+                <?php echo "-Gyventoju skaicius:".$cities['Londonas'][0]."mln.";?>
+            </li>
+            <li>
+                <?php echo "Ikurtas:".$cities['Londonas'][1]."m.";?>
+            </li>
+            <li>
+                <?php echo "Salis:".$cities['Londonas'][2];?>
+            </li>
+    </ul>
     
 </body>
 </html>
